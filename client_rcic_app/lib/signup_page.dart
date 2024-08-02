@@ -7,38 +7,9 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  final _auth = FirebaseAuth.instance;
-  final _emailController = TextEditingController();
-  final _passwordController = TextEditingController();
-
-  @override
-  void dispose() {
-    _emailController.dispose();
-    _passwordController.dispose();
-    super.dispose();
-  }
-
-  Future<void> _signUp() async {
-    final email = _emailController.text.trim();
-    final password = _passwordController.text.trim();
-
-    try {
-      UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-      print('User signed up: ${userCredential.user?.uid}');
-      // You can navigate to the login page or home page here
-    } on FirebaseAuthException catch (e) {
-      print('Sign up failed: ${e.message}');
-      // Show error message to the user
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(e.message ?? 'Sign up failed'),
-        ),
-      );
-    }
-  }
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  late String _email, _password;
 
   @override
   Widget build(BuildContext context) {
@@ -46,33 +17,51 @@ class _SignUpPageState extends State<SignUpPage> {
       appBar: AppBar(
         title: Text('Sign Up'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: Form(
+        key: _formKey,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            TextField(
-              controller: _emailController,
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                labelText: 'Email',
-              ),
+          children: <Widget>[
+            TextFormField(
+              validator: (input) {
+                if (input == null || input.isEmpty) {
+                  return 'Please enter an email';
+                }
+                return null;
+              },
+              onSaved: (input) => _email = input!,
+              decoration: InputDecoration(labelText: 'Email'),
             ),
-            TextField(
-              controller: _passwordController,
+            TextFormField(
+              validator: (input) {
+                if (input == null || input.length < 6) {
+                  return 'Password must be at least 6 characters long';
+                }
+                return null;
+              },
+              onSaved: (input) => _password = input!,
+              decoration: InputDecoration(labelText: 'Password'),
               obscureText: true,
-              decoration: InputDecoration(
-                labelText: 'Password',
-              ),
             ),
-            SizedBox(height: 20),
             ElevatedButton(
-              onPressed: _signUp,
+              onPressed: signUp,
               child: Text('Sign Up'),
             ),
           ],
         ),
       ),
     );
+  }
+
+  Future<void> signUp() async {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+      try {
+        await _auth.createUserWithEmailAndPassword(email: _email, password: _password);
+        // Navigate to login page or home page
+      } catch (e) {
+        // Handle errors
+        print(e);
+      }
+    }
   }
 }
