@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "67430823686",
+    "project_id": "clientrcicapp",
+    "storage_bucket": "clientrcicapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67430823686:android:e880418eb7144b9c539087",
+        "android_client_info": {
+          "package_name": "com.example.client_rcic_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmX0G7xiSle0YUSb0z0u6mZrXqOJrvzaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
