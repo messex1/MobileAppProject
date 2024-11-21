@@ -1,0 +1,157 @@
+https://packruble.github.io/weather_animation/
+
+
+Weather App background animations
+
+1. Scorching Sun
+
+	  return const WrapperScene(
+    		sizeCanvas: Size(350, 540),
+    		isLeftCornerGradient: false,
+    			colors: [
+      				Color(0xffd50000),
+				Color(0xffffd54f), ],
+    			children: [
+      				minified:j5(sunConfig: SunConfig(width: 360, blurSigma: 17, 					blurStyle: BlurStyle.solid, isLeftLocation: true, coreColor: 					Color(0xfff57c00), midColor: Color(0xffffee58), outColor: 					Color(0xffffa726), animMidMill: 1500, animOutMill: 1500),),],);
+2. Sunset
+
+	return const WrapperScene(
+    		sizeCanvas: Size(350, 540),
+    		isLeftCornerGradient: true,
+   	 	colors: [
+      		Color(0xff283593),
+		Color(0xffff8a65),
+		],
+    		children: [
+      		minified:j5(sunConfig: SunConfig(width: 262, blurSigma: 10, blurStyle: 				BlurStyle.solid, isLeftLocation: true, coreColor: Color(0xffffa726), midColor: 			Color(0xd6ffee58), outColor: Color(0xffff9800), animMidMill: 2000, animOutMill: 		2000),),
+		minified:kc(windConfig: WindConfig(width: 5, y: 208, windGap: 10, blurSigma: 6, 		color: Color(0xff607d8b), slideXStart: 0, slideXEnd: 350, pauseStartMill: 50, 			pauseEndMill: 6000, slideDurMill: 1000, blurStyle: BlurStyle.solid),),
+		minified:eG(cloudConfig: CloudConfig(size: 250, color: Color(0x65212121), icon: 		IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 20, y: 35, 			scaleBegin: 1, scaleEnd: 1.08, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 		20, slideY: 0, slideDurMill: 3000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+		minified:eG(cloudConfig: CloudConfig(size: 160, color: Color(0x77212121), icon: 		IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 140, y: 130, 		scaleBegin: 1, scaleEnd: 1.1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 		20, slideY: 4, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+		minified:kc(windConfig: WindConfig(width: 7, y: 300, windGap: 15, blurSigma: 7, 		color: Color(0xff607d8b), slideXStart: 0, slideXEnd: 350, pauseStartMill: 50, 			pauseEndMill: 6000, slideDurMill: 1000, blurStyle: BlurStyle.solid),),
+		],
+  	);
+
+3. Frosty
+
+	  return const WrapperScene(
+    		sizeCanvas: Size(350, 540),
+    		isLeftCornerGradient: true,
+    		colors: [
+      		Color(0xff303f9f),
+		Color(0xff1e88e5),
+		Color(0xffbdbdbd),
+		],
+    		children: [
+      		minified:j5(sunConfig: SunConfig(width: 300, blurSigma: 8, blurStyle: 				BlurStyle.solid, isLeftLocation: true, coreColor: Color(0xffffb74d), midColor: 			Color(0xffffff8d), outColor: Color(0xffffd180), animMidMill: 2000, animOutMill: 		2000),),
+		minified:lM(snowConfig: SnowConfig(count: 30, size: 20, color: Color(0xb3ffffff), 		icon: IconData(57399, fontFamily: 'MaterialIcons'), widgetSnowflake: null, 			areaXStart: 42, areaXEnd: 240, areaYStart: 200, areaYEnd: 540, waveRangeMin: 20, 		waveRangeMax: 70, waveMinSec: 5, waveMaxSec: 20, waveCurve: Cubic(0.45, 0.05, 			0.55, 0.95), fadeCurve: Cubic(0.60, 0.04, 0.98, 0.34), fallMinSec: 10, 				fallMaxSec: 60),),
+		minified:eG(cloudConfig: CloudConfig(size: 250, color: Color(0xa8fafafa), icon: 		IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 20, y: 3, 			scaleBegin: 1, scaleEnd: 1.08, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 		20, slideY: 0, slideDurMill: 3000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+		minified:eG(cloudConfig: CloudConfig(size: 160, color: Color(0xa8fafafa), icon: 		IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 140, y: 97, 		scaleBegin: 1, scaleEnd: 1.1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 		20, slideY: 4, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+		],
+  	);
+
+4. Snowfall
+
+	  return const WrapperScene(
+    		sizeCanvas: Size(350, 540),
+   		 isLeftCornerGradient: true,
+   			 colors: [
+     			 Color(0xff3949ab),
+		Color(0xff90caf9),
+			Color(0xffd6d6d6),
+		],
+    		children: [
+     		 minified:lM(snowConfig: SnowConfig(count: 30, size: 20, color: 				Color(0xb3ffffff), icon: IconData(57399, fontFamily: 'MaterialIcons'), 				widgetSnowflake: null, areaXStart: 42, areaXEnd: 240, areaYStart: 200, areaYEnd: 		540, waveRangeMin: 20, waveRangeMax: 70, waveMinSec: 5, waveMaxSec: 20, 			waveCurve: Cubic(0.45, 0.05, 0.55, 0.95), fadeCurve: Cubic(0.60, 0.04, 0.98, 			0.34), fallMinSec: 10, fallMaxSec: 60),),
+		minified:eG(cloudConfig: CloudConfig(size: 250, color: Color(0xa8fafafa), 			icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 			20, y: 3, scaleBegin: 1, scaleEnd: 1.08, scaleCurve: Cubic(0.40, 0.00, 				0.20, 1.00), slideX: 20, slideY: 0, slideDurMill: 3000, slideCurve: Cubic(0.40, 		0.00, 0.20, 1.00)),),
+		minified:eG(cloudConfig: CloudConfig(size: 160, color: Color(0xa8fafafa), icon: 		IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 140, y: 97, 		scaleBegin: 1, scaleEnd: 1.1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 		20, slideY: 4, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+		],
+  	);
+5. Showersleet
+
+	  return const WrapperScene(
+    sizeCanvas: Size(350, 540),
+    isLeftCornerGradient: true,
+    colors: [
+      Color(0xff37474f),
+Color(0xff546e7a),
+Color(0xffbdbdbd),
+Color(0xff90a4ae),
+Color(0xff78909c),
+],
+    children: [
+      minified:kc(windConfig: WindConfig(width: 5, y: 208, windGap: 10, blurSigma: 6, color: Color(0xff607d8b), slideXStart: 0, slideXEnd: 350, pauseStartMill: 50, pauseEndMill: 6000, slideDurMill: 1000, blurStyle: BlurStyle.solid),),
+minified:eG(cloudConfig: CloudConfig(size: 250, color: Color(0xa8fafafa), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 20, y: 3, scaleBegin: 1, scaleEnd: 1.08, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 20, slideY: 0, slideDurMill: 3000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+minified:kc(windConfig: WindConfig(width: 7, y: 300, windGap: 15, blurSigma: 7, color: Color(0xff607d8b), slideXStart: 0, slideXEnd: 350, pauseStartMill: 50, pauseEndMill: 6000, slideDurMill: 1000, blurStyle: BlurStyle.solid),),
+minified:lM(snowConfig: SnowConfig(count: 30, size: 20, color: Color(0xb3ffffff), icon: IconData(57399, fontFamily: 'MaterialIcons'), widgetSnowflake: null, areaXStart: 21, areaXEnd: 195, areaYStart: 200, areaYEnd: 540, waveRangeMin: 20, waveRangeMax: 70, waveMinSec: 5, waveMaxSec: 20, waveCurve: Cubic(0.45, 0.05, 0.55, 0.95), fadeCurve: Cubic(0.60, 0.04, 0.98, 0.34), fallMinSec: 10, fallMaxSec: 60),),
+minified:jT(rainConfig: RainConfig(count: 10, lengthDrop: 13, widthDrop: 4, color: Color(0x9978909c), isRoundedEndsDrop: true, widgetRainDrop: null, fallRangeMinDurMill: 500, fallRangeMaxDurMill: 1500, areaXStart: 160, areaXEnd: 150, areaYStart: 230, areaYEnd: 620, slideX: 2, slideY: 0, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00), fallCurve: Cubic(0.55, 0.09, 0.68, 0.53), fadeCurve: Cubic(0.95, 0.05, 0.80, 0.04)),),
+minified:eG(cloudConfig: CloudConfig(size: 160, color: Color(0xa8fafafa), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 140, y: 97, scaleBegin: 1, scaleEnd: 1.1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 20, slideY: 4, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+],
+  );
+  
+
+
+6.  Stormy
+
+	  return const WrapperScene(
+    sizeCanvas: Size(350, 540),
+    isLeftCornerGradient: false,
+    colors: [
+      Color(0xff263238),
+Color(0xff78909c),
+],
+    children: [
+      minified:kc(windConfig: WindConfig(width: 5, y: 208, windGap: 10, blurSigma: 6, color: Color(0xff607d8b), slideXStart: 0, slideXEnd: 350, pauseStartMill: 50, pauseEndMill: 6000, slideDurMill: 1000, blurStyle: BlurStyle.solid),),
+minified:jT(rainConfig: RainConfig(count: 40, lengthDrop: 13, widthDrop: 4, color: Color(0x9978909c), isRoundedEndsDrop: true, widgetRainDrop: null, fallRangeMinDurMill: 500, fallRangeMaxDurMill: 1500, areaXStart: 41, areaXEnd: 264, areaYStart: 208, areaYEnd: 620, slideX: 2, slideY: 0, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00), fallCurve: Cubic(0.55, 0.09, 0.68, 0.53), fadeCurve: Cubic(0.95, 0.05, 0.80, 0.04)),),
+minified:nY(thunderConfig: ThunderConfig(thunderWidth: 11, blurSigma: 28, blurStyle: BlurStyle.solid, color: Color(0x99ffee58), flashStartMill: 50, flashEndMill: 300, pauseStartMill: 50, pauseEndMill: 6000, points: [Offset(110.0, 210.0), Offset(120.0, 240.0)]),),
+minified:eG(cloudConfig: CloudConfig(size: 250, color: Color(0xad90a4ae), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 20, y: 3, scaleBegin: 1, scaleEnd: 1.08, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 20, slideY: 0, slideDurMill: 3000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+minified:kc(windConfig: WindConfig(width: 7, y: 300, windGap: 15, blurSigma: 7, color: Color(0xff607d8b), slideXStart: 0, slideXEnd: 350, pauseStartMill: 50, pauseEndMill: 6000, slideDurMill: 1000, blurStyle: BlurStyle.solid),),
+minified:eG(cloudConfig: CloudConfig(size: 160, color: Color(0xb1607d8b), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 140, y: 97, scaleBegin: 1, scaleEnd: 1.1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 20, slideY: 4, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+],
+  );
+  
+
+7. Rainy Overcast
+
+  return const WrapperScene(
+    sizeCanvas: Size(350, 540),
+    isLeftCornerGradient: true,
+    colors: [
+      Color(0xff424242),
+Color(0xffcfd8dc),
+],
+    children: [
+      minified:jT(rainConfig: RainConfig(count: 30, lengthDrop: 13, widthDrop: 4, color: Color(0xff9e9e9e), isRoundedEndsDrop: true, widgetRainDrop: null, fallRangeMinDurMill: 500, fallRangeMaxDurMill: 1500, areaXStart: 41, areaXEnd: 264, areaYStart: 208, areaYEnd: 620, slideX: 2, slideY: 0, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00), fallCurve: Cubic(0.55, 0.09, 0.68, 0.53), fadeCurve: Cubic(0.95, 0.05, 0.80, 0.04)),),
+minified:eG(cloudConfig: CloudConfig(size: 270, color: Color(0xcdbdbdbd), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 119, y: -50, scaleBegin: 1, scaleEnd: 1.1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 11, slideY: 13, slideDurMill: 4000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+minified:eG(cloudConfig: CloudConfig(size: 250, color: Color(0x92fafafa), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 20, y: 3, scaleBegin: 1, scaleEnd: 1.08, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 20, slideY: 0, slideDurMill: 3000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+minified:eG(cloudConfig: CloudConfig(size: 160, color: Color(0xb5fafafa), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 140, y: 97, scaleBegin: 1, scaleEnd: 1.1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 20, slideY: 4, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+],
+  );
+  
+
+8. Bad Thunder/lighting, rain and wind storm
+
+	  return const WrapperScene(
+    sizeCanvas: Size(350, 540),
+    isLeftCornerGradient: true,
+    colors: [
+      Color(0xff263238),
+Color(0xff37474f),
+Color(0xff455a64),
+Color(0xff546e7a),
+],
+    children: [
+      minified:nY(thunderConfig: ThunderConfig(thunderWidth: 7, blurSigma: 35, blurStyle: BlurStyle.solid, color: Color(0xffd4e157), flashStartMill: 60, flashEndMill: 707, pauseStartMill: 59, pauseEndMill: 1655, points: [Offset(110.0, 210.0), Offset(120.0, 240.0)]),),
+minified:eG(cloudConfig: CloudConfig(size: 159, color: Color(0xaa263238), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 174, y: 12, scaleBegin: 1, scaleEnd: 1.1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 17, slideY: 5, slideDurMill: 2012, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+minified:eG(cloudConfig: CloudConfig(size: 174, color: Color(0xaa263238), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 0, y: 8, scaleBegin: 1, scaleEnd: 1.1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 11, slideY: 5, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+minified:eG(cloudConfig: CloudConfig(size: 127, color: Color(0xaa263238), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 91, y: 1, scaleBegin: 1, scaleEnd: 1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 17, slideY: 8, slideDurMill: 6256, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+minified:eG(cloudConfig: CloudConfig(size: 250, color: Color(0xaa263238), icon: IconData(63056, fontFamily: 'MaterialIcons'), widgetCloud: null, x: 70, y: 5, scaleBegin: 1, scaleEnd: 1.1, scaleCurve: Cubic(0.40, 0.00, 0.20, 1.00), slideX: 11, slideY: 5, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00)),),
+minified:kc(windConfig: WindConfig(width: 9, y: 707, windGap: 14, blurSigma: 12, color: Color(0xffcddc39), slideXStart: 1, slideXEnd: 386, pauseStartMill: 32, pauseEndMill: 13593, slideDurMill: 687, blurStyle: BlurStyle.solid),),
+minified:kc(windConfig: WindConfig(width: 5, y: 189, windGap: 36, blurSigma: 8, color: Color(0xff607d8b), slideXStart: 0, slideXEnd: 500, pauseStartMill: 50, pauseEndMill: 6000, slideDurMill: 1000, blurStyle: BlurStyle.solid),),
+minified:jT(rainConfig: RainConfig(count: 16, lengthDrop: 12, widthDrop: 4, color: Color(0x9978909c), isRoundedEndsDrop: true, widgetRainDrop: null, fallRangeMinDurMill: 500, fallRangeMaxDurMill: 1500, areaXStart: 120, areaXEnd: 190, areaYStart: 215, areaYEnd: 540, slideX: 2, slideY: 0, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00), fallCurve: Cubic(0.55, 0.09, 0.68, 0.53), fadeCurve: Cubic(0.95, 0.05, 0.80, 0.04)),),
+minified:jT(rainConfig: RainConfig(count: 16, lengthDrop: 12, widthDrop: 4, color: Color(0x9978909c), isRoundedEndsDrop: true, widgetRainDrop: null, fallRangeMinDurMill: 500, fallRangeMaxDurMill: 1500, areaXStart: 120, areaXEnd: 207, areaYStart: 208, areaYEnd: 540, slideX: 2, slideY: 0, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00), fallCurve: Cubic(0.55, 0.09, 0.68, 0.53), fadeCurve: Cubic(0.95, 0.05, 0.80, 0.04)),),
+minified:jT(rainConfig: RainConfig(count: 16, lengthDrop: 12, widthDrop: 4, color: Color(0x9978909c), isRoundedEndsDrop: true, widgetRainDrop: null, fallRangeMinDurMill: 500, fallRangeMaxDurMill: 1500, areaXStart: 0, areaXEnd: 179, areaYStart: 162, areaYEnd: 540, slideX: 2, slideY: 0, slideDurMill: 2000, slideCurve: Cubic(0.40, 0.00, 0.20, 1.00), fallCurve: Cubic(0.55, 0.09, 0.68, 0.53), fadeCurve: Cubic(0.95, 0.05, 0.80, 0.04)),),
+minified:kc(windConfig: WindConfig(width: 6, y: 315, windGap: 14, blurSigma: 8, color: Color(0xff607d8b), slideXStart: 0, slideXEnd: 500, pauseStartMill: 50, pauseEndMill: 6000, slideDurMill: 1000, blurStyle: BlurStyle.solid),),
+minified:kc(windConfig: WindConfig(width: 6, y: 540, windGap: 22, blurSigma: 8, color: Color(0xff607d8b), slideXStart: 0, slideXEnd: 500, pauseStartMill: 50, pauseEndMill: 6000, slideDurMill: 1000, blurStyle: BlurStyle.solid),),
+minified:nY(thunderConfig: ThunderConfig(thunderWidth: 13, blurSigma: 21, blurStyle: BlurStyle.solid, color: Color(0x99fff9c4), flashStartMill: 50, flashEndMill: 300, pauseStartMill: 50, pauseEndMill: 6000, points: [Offset(110.0, 210.0), Offset(120.0, 240.0)]),),
+],
+  );
+  

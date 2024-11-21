@@ -1,0 +1,6 @@
+Application Theme and Style:
+
+- Customized widget backgrounds using a semi-transparent black overlay for better text visibility.
+- Changed text colors to white for better contrast against the background.
+- Rounded corners on containers for a cleaner, modern look.
+- Customized the button style with rounded edges and a consistent color scheme across widgets.
